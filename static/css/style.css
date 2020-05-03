@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #b3c2bf;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+div a {
+  text-decoration: none;
+}
+
+.brand-logo {
+  font-family: "Courgette", cursive;
+  font-weight: bold;
+  font-size: xx-large;
+  margin: 0 0 0 15px;
+}
+
+nav .brand-logo,
+nav li a,
+.material-icons,
+.footer-copyright p {
+  color: #edd9c0;
+}
+
+.nav-wrapper,
+.page-footer {
+  background-color: #3b3a36;
+  font-weight: bold;
+}
+
+.footer-copyright p {
+  position: fixed;
+  bottom: 0px;
+  float: left;
+  width: 100%
+  text-align: center;
+}
