@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #3fb0ac;
+  background-color: #729f98;
   color: #dddfd4;
 }
 
@@ -26,12 +26,12 @@ nav .brand-logo,
 nav li a,
 .material-icons,
 .footer-copyright p {
-  color: #fae596;
+  color: #e6af4b;
 }
 
 .nav-wrapper,
 .footer-copyright {
-  background-color: #173e43;
+  background-color: #3b3a36;
   font-weight: bold;
 }
 
