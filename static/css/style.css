@@ -36,9 +36,9 @@ nav li a,
 }
 
 .footer-copyright {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    line-height: 40px;
-    text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  line-height: 40px;
+  text-align: center;
 }
