@@ -42,3 +42,7 @@ nav li a,
   line-height: 40px;
   text-align: center;
 }
+
+.center p {
+    float: left;
+}
