@@ -1,45 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
 
-	<!-- Compiled and minified CSS -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Materialize Icon CSS -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
 
-	<!-- Materialize Icon CSS -->
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Static CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+      type="text/css"
+    />
+    <title>Inspire Quote</title>
+  </head>
 
-	<!-- Static CSS -->
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
-	<title>Inspire Quote</title>
-</head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <div class="nav-wrapper">
+        <a href="{{ url_for('index') }}" class="brand-logo">InspireQuote</a>
+        <a href="#" data-target="slide-out" class="sidenav-trigger"
+          ><i class="material-icons">menu</i></a
+        >
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="#">New Inspire</a></li>
+          <li><a href="#">New Category</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </div>
+    </nav>
 
-<body>
-	<!-- Navigation -->
-	<nav>
-		<div class="nav-wrapper">
-			<a href="{{ url_for('index') }}" class="brand-logo">InspireQuote</a>
-			<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-			<ul id="nav-mobile" class="right hide-on-med-and-down">
-				<li><a href="{{ url_for('index') }}">Home</a></li>
-				<li><a href="#">New Inspire</a></li>
-				<li><a href="#">New Category</a></li>
-				<li><a href="#">About</a></li>
-			</ul>
-		</div>
-	</nav>
+    <footer class="footer-copyright">
+      <p>Copyright © 2020 InspireQuote</p>
+    </footer>
 
-	<footer class="page-footer">
-		<div class="footer-copyright">			
-				<p>Copyright © 2020 InspireQuote</p>
-		</div>
-	</footer>
-
-	<!-- Compiled and minified JavaScript -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-</body>
-
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
