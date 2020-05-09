@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
 
-* {
+*,
+.container {
   margin: 0;
   padding: 0;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -37,9 +38,19 @@ nav li a,
   font-weight: bold;
 }
 
-.collapsible-header, .collapsible-body, .collapsible .material-icons {
-    background-color:#aa863a;
-    color: #f0eceb;
+.carousel {
+  border: 1px solid #f0eceb;
+}
+
+.center {
+  margin: 70px 20px 50px 50px;
+}
+
+.collapsible-header,
+.collapsible-body,
+.collapsible .material-icons {
+  background-color: #aa863a;
+  color: #f0eceb;
 }
 
 .footer-copyright {
