@@ -7,8 +7,8 @@
 }
 
 .container {
-    margin: 0 auto;
-    width: 100%;
+  margin: 0 auto;
+  width: 100%;
 }
 
 body {
@@ -54,6 +54,23 @@ nav li a,
 .collapsible-body,
 .collapsible .material-icons {
   background-color: #aa863a;
+  color: #f0eceb;
+}
+
+h3 {
+  text-shadow: 5px 5px 5px black;
+  text-align: center;
+  font-weight: bold;
+}
+
+h3 span {
+  font-family: "Courgette", cursive;
+  font-weight: bold;
+}
+
+h5 {
+  text-align: center;
+  font-weight: bold;
   color: #f0eceb;
 }
 
