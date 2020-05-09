@@ -1,10 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
 
-*,
-.container {
+* {
   margin: 0;
   padding: 0;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
 }
 
 body {
@@ -43,7 +47,7 @@ nav li a,
 }
 
 .center {
-  margin: 70px 20px 50px 50px;
+  margin: 30px 0 50px 0;
 }
 
 .collapsible-header,
