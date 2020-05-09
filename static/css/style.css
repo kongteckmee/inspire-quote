@@ -8,7 +8,7 @@
 
 body {
   background-color: #729f98;
-  color: #dddfd4;
+  color: #e6af4b;
 }
 
 div a {
@@ -25,14 +25,21 @@ div a {
 nav .brand-logo,
 nav li a,
 .material-icons,
-.footer-copyright p {
+.footer-copyright p,
+.sidenav li a {
   color: #e6af4b;
 }
 
 .nav-wrapper,
-.footer-copyright {
+.footer-copyright,
+.sidenav {
   background-color: #3b3a36;
   font-weight: bold;
+}
+
+.collapsible-header, .collapsible-body, .material-icons {
+    background-color:#aa863a;
+    color: #f0eceb;
 }
 
 .footer-copyright {
@@ -44,5 +51,5 @@ nav li a,
 }
 
 .center p {
-    float: left;
+  float: left;
 }
