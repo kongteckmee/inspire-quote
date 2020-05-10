@@ -75,18 +75,32 @@ h5 {
 }
 
 .collapsible-body {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .collapse-button a {
-    margin: 10px 0 0 10px;
-    background-color: #f0eceb;
-    color: #aa863a;
-    font-weight: bold;
+  margin: 10px 0 0 10px;
+  background-color: #f0eceb;
+  color: #aa863a;
+  font-weight: bold;
 }
 
-.collapse-button a:hover {
-    background-color: #e0e0e0;
+.collapse-button a:hover,
+.collapse-button a:focus {
+  background-color: #e0e0e0;
+  color: #e6af4b;
+}
+
+.button {
+  background-color: #aa863a;
+  color: #f0eceb;
+  font-weight: bold;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #e0e0e0;
+  color: #e6af4b;
 }
 
 .footer-copyright {
