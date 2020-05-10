@@ -12,8 +12,8 @@
 }
 
 body {
-  background-color: #729f98;
-  color: #e6af4b;
+  background-color: #e7ebe0ff;
+  color: #28334aff;
 }
 
 div a {
@@ -29,16 +29,15 @@ div a {
 
 nav .brand-logo,
 nav li a,
-.material-icons,
 .footer-copyright p,
 .sidenav li a {
-  color: #e6af4b;
+  color: #e7ebe0ff;
 }
 
 .nav-wrapper,
 .footer-copyright,
 .sidenav {
-  background-color: #3b3a36;
+  background-color: #a13941ff;
   font-weight: bold;
 }
 
@@ -51,7 +50,6 @@ nav li a,
 }
 
 h3 {
-  text-shadow: 5px 5px 5px black;
   text-align: center;
   font-weight: bold;
 }
@@ -64,12 +62,11 @@ h3 span {
 h5 {
   text-align: center;
   font-weight: bold;
-  color: #f0eceb;
+  text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0, 0, 0, 0.15);
 }
 
 .collapsible-header,
-.collapsible-body,
-.collapsible .material-icons {
+.collapsible-body {
   background-color: #aa863a;
   color: #f0eceb;
 }
@@ -101,6 +98,16 @@ h5 {
 .button:focus {
   background-color: #e0e0e0;
   color: #e6af4b;
+}
+
+.input-field i,
+i:focus {
+  color: #e6af4b;
+  text-shadow: 5px 5px 5px black;
+}
+
+.inspire-text {
+  color: #e0e0e0;
 }
 
 .footer-copyright {
