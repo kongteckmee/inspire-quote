@@ -8,5 +8,5 @@ $(document).ready(function () {
   });
   window.setInterval(function () {
     $(".carousel").carousel("next");
-  }, 5000);
+  }, 5500);
 });

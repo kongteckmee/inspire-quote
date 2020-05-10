@@ -50,13 +50,6 @@ nav li a,
   margin: 30px 0 50px 0;
 }
 
-.collapsible-header,
-.collapsible-body,
-.collapsible .material-icons {
-  background-color: #aa863a;
-  color: #f0eceb;
-}
-
 h3 {
   text-shadow: 5px 5px 5px black;
   text-align: center;
@@ -72,6 +65,28 @@ h5 {
   text-align: center;
   font-weight: bold;
   color: #f0eceb;
+}
+
+.collapsible-header,
+.collapsible-body,
+.collapsible .material-icons {
+  background-color: #aa863a;
+  color: #f0eceb;
+}
+
+.collapsible-body {
+    overflow: hidden;
+}
+
+.collapse-button a {
+    margin: 10px 0 0 10px;
+    background-color: #f0eceb;
+    color: #aa863a;
+    font-weight: bold;
+}
+
+.collapse-button a:hover {
+    background-color: #e0e0e0;
 }
 
 .footer-copyright {
