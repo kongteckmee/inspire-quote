@@ -110,6 +110,25 @@ i:focus {
   color: #e0e0e0;
 }
 
+.about-inspire {
+  margin: 0 50px 0 50px;
+  text-align: center;
+}
+
+.about-developer {
+  margin: 0 auto;
+  font-weight: bold;
+  text-align: center;
+}
+
+.about-developer .github {
+  background-color: #24292e;
+}
+
+.about-developer .linkedin {
+  background-color: #0e76a8;
+}
+
 .footer-copyright {
   position: fixed;
   bottom: 0;
