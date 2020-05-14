@@ -14,9 +14,9 @@ def new_inspire():
     return render_template("new_inspire.html")
 
 
-@app.route('/new_category')
-def new_category():
-    return render_template("new_category.html")
+@app.route('/category')
+def category():
+    return render_template("category.html")
 
 
 @app.route('/about')
