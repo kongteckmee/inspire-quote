@@ -1,0 +1,47 @@
+{% extends 'base.html' %} {% block content %}
+<h3>Edit Inspire</h3><br>
+<div class="row inspire-text">
+	<form class="col s12">
+		<div class="row">
+			<div class="input-field col s12">
+				<i class="material-icons prefix">text_fields</i>
+				<input id="inspire_quote" name="inspire_quote" type="text" class="validate" value="" />
+				<label for="inspire_quote">Inspire Quote</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12">
+				<i class="material-icons prefix">view_list</i>
+				<select id="category" name="category">
+          <option value="" disabled selected>Select Category</option>
+          <option value="" selected></option>
+        </select>
+				<label>Category</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12">
+				<i class="material-icons prefix">sms</i>
+				<textarea
+          id="quote_description"
+          name="quote_description"
+          class="materialize-textarea"
+        ></textarea>
+				<label for="quote_description">Description</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12">
+				<i class="material-icons prefix">account_circle</i>
+				<input id="nickname" name="nickname" type="text" class="validate" value="" />
+				<label for="nickname">Your Nickname</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s4">
+				<button class="btn waves-effect waves-light button" type="submit" name="submit">Submit</button>
+			</div>
+		</div>
+	</form>
+</div>
+{% endblock %}
