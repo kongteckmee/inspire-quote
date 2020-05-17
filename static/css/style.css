@@ -118,6 +118,10 @@ i:focus {
   color: #e0e0e0;
 }
 
+.category {
+    margin-top: 10px;
+}
+
 .about-inspire {
   margin: 0 50px 0 50px;
   text-align: center;

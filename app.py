@@ -29,7 +29,7 @@ def new_inspire():
 
 @app.route('/category')
 def category():
-    return render_template("category.html")
+    return render_template("category.html", categories=mongo.db.category.find())
 
 
 @app.route('/about')

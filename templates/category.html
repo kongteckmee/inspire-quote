@@ -3,17 +3,19 @@
 <h3>Category</h3><br>
 <div class="row">
 	<ul class="collapsible">
+    {% for category in categories %}
 		<li>
 			<div class="collapsible-header">
-				<div class="col s4">
-					<span><b>Category Name</b></span>
+				<div class="category col s6">
+					<span><b>{{category.category_name}}</b></span>
 				</div>
-				<div class="collapse-button col s8">
+				<div class="collapse-button col s6">
 					<a href="#" class="waves-effect waves-light btn btn-small right">Delete</a>
 					<a href="#" class="waves-effect waves-light btn btn-small right">Edit</a>
 				</div>
 			</div>
 		</li>
+    {% endfor %}
 	</ul>
 </div>
 
