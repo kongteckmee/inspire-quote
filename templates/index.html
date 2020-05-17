@@ -19,8 +19,14 @@
 		<h3>Welcome to <span>InspireQuote</span></h3>
 		<h5>This is a place to quote by you!</h5>
 		<br />
-		<ul class="collapsible center">
-			<li>
+		<!-- <ul class="collapsible center"> -->
+			{% for quote in quotes %}
+                {{quote.quote}}
+                {{quote.category_name}}
+                {{quote.description}}
+                {{quote.quote_by}}
+			{% endfor %}
+			<!-- <li>
 				<div class="collapsible-header">
 					First
 				</div>
@@ -31,11 +37,11 @@
 						<a href="#" class="waves-effect waves-light btn btn-small right">Edit</a>
 					</div>
 				</div>
-			</li>
-		</ul>
-		<div class="input-field col s4">
+			</li> -->
+		<!-- </ul> -->
+		<!-- <div class="input-field col s4">
 			<button class="btn waves-effect waves-light button" type="submit" name="add_new">Add New</button>
-		</div>
+		</div> -->
 	</div>
 </div>
 {% endblock %}
