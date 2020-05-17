@@ -33,7 +33,7 @@
                 </div>
 				<div class="collapsible-body">
 					<span><b>Description: <br></b>{{quote.description}}</span><br>
-                    <span class="right">(<b>By: </b>{{quote.quote_by}})</span><br>
+                    <span class="right">(<b>By: </b>{{quote.quote_by}})</span><br><br>
 					<div class="collapse-button">
 						<a href="#" class="waves-effect waves-light btn btn-small right">Delete</a>
 						<a href="#" class="waves-effect waves-light btn btn-small right">Edit</a>
@@ -43,7 +43,7 @@
 			{% endfor %}
 		</ul>
 		<div class="input-field">
-			<button class="btn waves-effect waves-light button" type="submit" name="add_new">Add New</button>
+			<a href="{{ url_for('new_inspire') }}" class="btn waves-effect waves-light button">Add New</a>
 		</div>
 	</div>
 </div>
