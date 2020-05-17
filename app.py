@@ -1,8 +1,7 @@
 import os
-import pymongo
 from os import path
 from flask import Flask, render_template, redirect, request, url_for
-from flask_pymongo import PyMongo
+from flask_pymongo import PyMongo, pymongo
 from bson.objectid import ObjectId
 
 if os.path.exists("env.py"):
@@ -11,7 +10,7 @@ if os.path.exists("env.py"):
 app = Flask(__name__)
 
 app.config["MONGO_URI"] = os.getenv('MONGO_URI')
-SECRET_KEY = os.getenv('SECRET_KEY')
+app.config["SECRET_KEY"] = os.getenv('SECRET_KEY')
 DBS_NAME = "inspire_quote"
 
 mongo = PyMongo(app)
