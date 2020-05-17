@@ -24,7 +24,7 @@ def index():
 
 @app.route('/new_inspire')
 def new_inspire():
-    return render_template("new_inspire.html")
+    return render_template("new_inspire.html", categories=mongo.db.category.find())
 
 
 @app.route('/category')
