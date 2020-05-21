@@ -24,12 +24,16 @@ def index():
 
 @app.route('/new_inspire')
 def new_inspire():
-    return render_template("new_inspire.html", categories=mongo.db.category.find())
+    return render_template("new_inspire.html")
 
 
 @app.route('/category')
 def category():
     return render_template("category.html", categories=mongo.db.category.find())
+
+@app.route('/add_category')
+def add_category():
+    return render_template("add_category.html")
 
 
 @app.route('/about')
