@@ -1,18 +1,18 @@
 {% extends 'base.html' %} {% block content %}
 <h3>New Inspire</h3><br>
 <div class="row inspire-text">
-	<form class="col s12">
+	<form action="{{ url_for('insert_inspire') }}" method="POST" class="col s12">
 		<div class="row">
 			<div class="input-field col s12">
 				<i class="material-icons prefix">text_fields</i>
-				<input id="icon_prefix" type="text" class="validate" />
-				<label for="icon_prefix">New Inspire Quote</label>
+				<input id="quote" name="quote" type="text" class="validate" required/>
+				<label>New Inspire Quote</label>
 			</div>
 		</div>
 		<div class="row">
 			<div class="input-field col s12">
 				<i class="material-icons prefix">view_list</i>
-				<select id="category" name="category">
+				<select id="category_name" name="category_name" class="validate" required>
           <option value="" disabled selected>Select Category</option>
           {% for category in categories %}
             <option value="{{category.category_name}}">{{category.category_name}}</option>
@@ -24,19 +24,15 @@
 		<div class="row">
 			<div class="input-field col s12">
 				<i class="material-icons prefix">sms</i>
-				<textarea
-          id="quote_description"
-          name="quote_description"
-          class="materialize-textarea"
-        ></textarea>
+				<textarea id="description" name="description" class="materialize-textarea" required></textarea>
 				<label>Description</label>
 			</div>
 		</div>
 		<div class="row">
 			<div class="input-field col s12">
 				<i class="material-icons prefix">account_circle</i>
-				<input id="nickname" name="nickname" type="text" class="validate" />
-				<label for="icon_telephone">Your Nickname</label>
+				<input id="quote_by" name="quote_by" type="text" class="validate" required/>
+				<label>Your Nickname</label>
 			</div>
 		</div>
 		<div class="row">

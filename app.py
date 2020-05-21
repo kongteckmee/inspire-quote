@@ -24,7 +24,13 @@ def index():
 
 @app.route('/new_inspire')
 def new_inspire():
-    return render_template("new_inspire.html")
+    return render_template("new_inspire.html", categories=mongo.db.category.find())
+
+@app.route('/insert_inspire', methods=['POST'])
+def insert_inspire():
+    inspires = mongo.db.quote
+    inspires.insert_one(request.form.to_dict())
+    return redirect(url_for('index'))
 
 
 @app.route('/category')
