@@ -26,6 +26,7 @@ def index():
 def new_inspire():
     return render_template("new_inspire.html", categories=mongo.db.category.find())
 
+
 @app.route('/insert_inspire', methods=['POST'])
 def insert_inspire():
     inspires = mongo.db.quote
@@ -37,9 +38,17 @@ def insert_inspire():
 def category():
     return render_template("category.html", categories=mongo.db.category.find())
 
+
 @app.route('/add_category')
 def add_category():
     return render_template("add_category.html")
+
+
+@app.route('/insert_category', methods=['POST'])
+def insert_category():
+    categories = mongo.db.category
+    categories.insert_one(request.form.to_dict())
+    return redirect(url_for('category'))
 
 
 @app.route('/about')
