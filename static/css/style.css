@@ -83,7 +83,8 @@ h5 {
   overflow: hidden;
 }
 
-.collapse-button a {
+.collapse-button a,
+.collapse-button button {
   margin-left: 10px;
   background-color: #f0eceb;
   color: #aa863a;
@@ -91,7 +92,9 @@ h5 {
 }
 
 .collapse-button a:hover,
-.collapse-button a:focus {
+.collapse-button a:focus,
+.collapse-button button:hover,
+.collapse-button button:focus {
   background-color: #e0e0e0;
   color: #e6af4b;
 }
@@ -119,7 +122,7 @@ i:focus {
 }
 
 .category {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 .about-inspire {
