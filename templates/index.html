@@ -35,10 +35,10 @@
 					<span><b>Description: <br></b>{{quote.description}}</span><br>
 					<span class="right">(<b>By: </b>{{quote.quote_by}})</span><br><br>
 					<div class="collapse-button">
-						<input id="{{quote._id}}" type="text" value="{{quote.quote}}">
+						<!-- <input id="" type="text" value="{{quote.quote}}"> -->
 						<a href="#" class="waves-effect waves-light btn btn-small right">Delete</a>
 						<a href="#" class="waves-effect waves-light btn btn-small right">Edit</a>
-						<button type="button" onclick="copyToClipboard()" class="waves-effect waves-light btn btn-small right">Copy</button>
+						<!-- <button type="button" onclick="copyToClipboard()" class="waves-effect waves-light btn btn-small right">Copy</button> -->
 					</div>
 				</div>
 			</li>
@@ -49,10 +49,10 @@
 		</div>
 	</div>
 </div>
-<script>
+<!-- <script>
     function copyToClipboard() {
-    document.getElementsById('#{{quote._id}}').select();
+    document.getElementsById('').select();
     document.execCommand("copy");
 }
-</script>
+</script> -->
 {% endblock %}
