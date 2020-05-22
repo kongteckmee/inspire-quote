@@ -83,8 +83,7 @@ h5 {
   overflow: hidden;
 }
 
-.collapse-button a,
-.collapse-button button {
+.collapse-button a {
   margin-left: 10px;
   background-color: #f0eceb;
   color: #aa863a;
@@ -92,9 +91,7 @@ h5 {
 }
 
 .collapse-button a:hover,
-.collapse-button a:focus,
-.collapse-button button:hover,
-.collapse-button button:focus {
+.collapse-button a:focus {
   background-color: #e0e0e0;
   color: #e6af4b;
 }
@@ -109,6 +106,10 @@ h5 {
 .button:focus {
   background-color: #e0e0e0;
   color: #e6af4b;
+}
+
+.user-select {
+    user-select: all;
 }
 
 .input-field i,
