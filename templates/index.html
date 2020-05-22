@@ -24,21 +24,23 @@
 			<li>
 				<div class="collapsible-header">
 					<i class="material-icons">expand_more</i>
-                    <div class="col s9">
-                        <span>"<b class="user-select">{{quote.quote}}</b>"</span>
-                    </div>
-                    <div class="col s3">
-                        <span>{{quote.category_name}}</span>
-                    </div>
-                </div>
+					<div class="col s9">
+						<span>"<b class="user-select">{{quote.quote}}</b>"</span>
+					</div>
+					<div class="col s3">
+						<span>{{quote.category_name}}</span>
+					</div>
+				</div>
 				<div class="collapsible-body">
 					<span><b>Description: <br></b>{{quote.description}}</span><br>
-                    <span class="right">(<b>By: </b>{{quote.quote_by}})</span><br><br>
+					<span class="right">(<b>By: </b>{{quote.quote_by}})</span><br><br>
 					<div class="collapse-button">
+						<input id="{{quote._id}}" type="text" value="{{quote.quote}}">
 						<a href="#" class="waves-effect waves-light btn btn-small right">Delete</a>
 						<a href="#" class="waves-effect waves-light btn btn-small right">Edit</a>
+						<button type="button" onclick="copyToClipboard()" class="waves-effect waves-light btn btn-small right">Copy</button>
 					</div>
-				</div>				
+				</div>
 			</li>
 			{% endfor %}
 		</ul>
@@ -47,4 +49,10 @@
 		</div>
 	</div>
 </div>
+<script>
+    function copyToClipboard() {
+    document.getElementsById('#{{quote._id}}').select();
+    document.execCommand("copy");
+}
+</script>
 {% endblock %}

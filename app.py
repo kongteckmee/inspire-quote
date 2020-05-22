@@ -51,6 +51,12 @@ def insert_category():
     return redirect(url_for('category'))
 
 
+@app.route('/edit_category/<category_id>')
+def edit_category(category_id):
+    the_category = mongo.db.category.find_one({"_id": ObjectId(category_id)})
+    return render_template("category.html", category=the_category)
+
+
 @app.route('/about')
 def about():
     return render_template("about.html")
