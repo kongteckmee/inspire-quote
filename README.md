@@ -5,6 +5,6 @@ This project started during the lockdown due to the COVID-19. Whether you are wo
 
 Inspire Quote is a site project that giving us a place to quote and encourage by own!
 
-The deployed website:
+The deployed website: **[InpireQuote](https://inspire-quote.herokuapp.com/)**
 
 # UX
