@@ -32,10 +32,10 @@
 					</div>
 				</div>
 				<div class="collapsible-body">
-					<span><b>Description: <br></b>{{quote.description}}</span><br>
+					<span><b>Description: </b><br><p class="user-select">{{quote.description}}</p></span><br>
 					<span class="right">(<b>By: </b>{{quote.quote_by}})</span><br><br>
 					<div class="collapse-button">
-						<input id="{{quote._id}}" type="text" value="{{quote.quote}}">
+						<input id="{{quote._id}}" type="hidden" value="{{quote.quote}}">
 						<a href="#" class="waves-effect waves-light btn btn-small right">Delete</a>
 						<a href="#" class="waves-effect waves-light btn btn-small right">Edit</a>
 						<button type="button" onclick="copyToClipboard('{{quote._id}}')" class="waves-effect waves-light btn btn-small right">Copy</button>
@@ -50,9 +50,10 @@
 	</div>
 </div>
 <script>
-    function copyToClipboard(e) {
-    document.getElementById(e).select();
-    document.execCommand("copy");
-}
+	function copyToClipboard(e) {
+        var copyText = document.getElementById(e);
+        copyText.select();
+        document.execCommand("copy");
+  };
 </script>
 {% endblock %}
