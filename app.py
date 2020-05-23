@@ -43,9 +43,14 @@ def edit_inspire(quote_id):
 
 @app.route('/update_inspire/<quote_id>', methods=['POST'])
 def update_inspire(quote_id):
-    mongo.db.quote.update(
-        {'_id': ObjectId(quote_id)},
-        {'quote': request.form.get('quote')})
+    quotes = mongo.db.quote
+    quotes.update({'_id': ObjectId(quote_id)},
+    {
+        'quote': request.form.get('quote'),
+        'category_name': request.form.get('category_name'),
+        'description': request.form.get('description'),
+        'quote_by': request.form.get('quote_by')
+    })
     return redirect(url_for('index'))
 
 
