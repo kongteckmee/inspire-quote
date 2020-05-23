@@ -34,6 +34,27 @@ def insert_inspire():
     return redirect(url_for('index'))
 
 
+@app.route('/edit_inspire/<quote_id>')
+def edit_inspire(quote_id):
+    the_quote = mongo.db.quote.find_one({"_id": ObjectId(quote_id)})
+    all_category = mongo.db.category.find()
+    return render_template("edit_inspire.html", quote=the_quote, categories=all_category)
+
+
+@app.route('/update_inspire/<quote_id>', methods=['POST'])
+def update_inspire(quote_id):
+    mongo.db.quote.update(
+        {'_id': ObjectId(quote_id)},
+        {'quote': request.form.get('quote')})
+    return redirect(url_for('index'))
+
+
+@app.route('/delete_inspire/<quote_id>')
+def delete_inspire(quote_id):
+    mongo.db.quote.remove({"_id": ObjectId(quote_id)})
+    return redirect(url_for('index'))
+
+
 @app.route('/category')
 def category():
     return render_template("category.html", categories=mongo.db.category.find())
@@ -46,8 +67,8 @@ def add_category():
 
 @app.route('/insert_category', methods=['POST'])
 def insert_category():
-    categories = mongo.db.category
-    categories.insert_one(request.form.to_dict())
+    category = mongo.db.category
+    category.insert_one(request.form.to_dict())
     return redirect(url_for('category'))
 
 

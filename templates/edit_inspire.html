@@ -1,20 +1,26 @@
 {% extends 'base.html' %} {% block content %}
 <h3>Edit Inspire</h3><br>
 <div class="row inspire-text">
-	<form class="col s12">
+	<form action="{{ url_for('update_inspire', quote_id=quote._id) }}" method="POST" class="col s12">
 		<div class="row">
 			<div class="input-field col s12">
 				<i class="material-icons prefix">text_fields</i>
-				<input id="inspire_quote" name="inspire_quote" type="text" class="validate" value="" />
-				<label for="inspire_quote">Inspire Quote</label>
+				<input id="quote" name="quote" type="text" class="validate" value="{{quote.quote}}" required/>
+				<label>Inspire Quote</label>
 			</div>
 		</div>
 		<div class="row">
 			<div class="input-field col s12">
 				<i class="material-icons prefix">view_list</i>
-				<select id="category" name="category">
+				<select id="category_name" name="category_name" class="validate" required>
           <option value="" disabled selected>Select Category</option>
-          <option value="" selected></option>
+          {% for category in categories %}
+            {% if category.category_name == quote.category_name %}
+                <option value="{{category.category_name}}" selected>{{category.category_name}}</option>
+            {% else %}
+                <option value="{{category.category_name}}">{{category.category_name}}</option>
+            {% endif %}
+          {% endfor %}
         </select>
 				<label>Category</label>
 			</div>
@@ -22,19 +28,15 @@
 		<div class="row">
 			<div class="input-field col s12">
 				<i class="material-icons prefix">sms</i>
-				<textarea
-          id="quote_description"
-          name="quote_description"
-          class="materialize-textarea"
-        ></textarea>
-				<label for="quote_description">Description</label>
+				<textarea id="description" name="description" class="materialize-textarea" required>{{quote.description}}</textarea>
+				<label>Description</label>
 			</div>
 		</div>
 		<div class="row">
 			<div class="input-field col s12">
 				<i class="material-icons prefix">account_circle</i>
-				<input id="nickname" name="nickname" type="text" class="validate" value="" />
-				<label for="nickname">Your Nickname</label>
+				<input id="quote_by" name="quote_by" type="text" class="validate" value="{{quote.quote_by}}" required/>
+				<label>Your Nickname</label>
 			</div>
 		</div>
 		<div class="row">
