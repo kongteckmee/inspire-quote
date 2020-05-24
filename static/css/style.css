@@ -73,7 +73,7 @@ h3 span {
   font-weight: bold;
 }
 
-h5, p {
+.instruction h5, .instruction p {
   text-align: center;
   font-weight: bold;
 }
