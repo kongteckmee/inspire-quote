@@ -2,7 +2,7 @@
 <div class="row">
 
     <!-- Materialize Carousel -->
-	<div class="col s4">
+	<div class="col m4">
 		<div class="carousel carousel-slider center">
 			<a class="carousel-item"><img src="{{ url_for('static', filename='img/c1.png') }}"/></a>
 			<a class="carousel-item"><img src="{{ url_for('static', filename='img/c2.png') }}"/></a>
@@ -13,7 +13,7 @@
 	</div>
 
     <!-- Introduction & Inspire Quote in Collapsible -->
-	<div class="col s8">
+	<div class="col m8">
 		<br>
 		<h3>Welcome to <span>InspireQuote</span></h3>
 		<h5>This is a place to quote by you!</h5>
@@ -23,10 +23,10 @@
 			<li>
 				<div class="collapsible-header">
 					<i class="material-icons">expand_more</i>
-					<div class="col s9">
+					<div class="col m9">
 						<span>"<b class="user-select">{{ quote.quote }}</b>"</span>
 					</div>
-					<div class="col s3">
+					<div class="col m3">
 						<span>{{ quote.category_name }}</span>
 					</div>
 				</div>

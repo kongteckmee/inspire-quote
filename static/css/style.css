@@ -16,6 +16,7 @@ body {
 .container {
   margin: 0 auto;
   width: 95%;
+  height: 680px;
 }
 
 /* --- Navbar & Footer --- */
@@ -45,7 +46,6 @@ nav li a,
 }
 
 .footer-copyright {
-  position: fixed;
   bottom: 0;
   width: 100%;
   line-height: 40px;
@@ -134,10 +134,6 @@ i:focus {
   text-shadow: 5px 5px 5px black;
 }
 
-/* .inspire-text {
-  color: #e0e0e0;
-} */
-
 .category {
   margin-top: 5px;
 }
@@ -160,4 +156,38 @@ i:focus {
 
 .about-developer .linkedin {
   background-color: #0e76a8;
+}
+
+/* --- Media Queries - Tablet Size --- */
+@media (min-width: 768px) and (max-width: 1024px) { 
+    .carousel {
+        margin: 200px 0 0 0;
+    }
+
+    .collapsible {
+        height: 35vh;
+    }
+
+    .footer-copyright {
+        position: fixed;
+    }
+}
+
+/* --- Media Queries - Mobile Size --- */
+@media (min-width: 360px) and (max-width: 767px) {
+    .container {
+        height: 1000px;
+    }
+
+    .carousel {
+        display: none !important;    
+    }
+
+    .collapsible {
+        height: 60vh;
+    }
+
+    .collapsible .category {
+        font-size: 70%;
+    }
 }
