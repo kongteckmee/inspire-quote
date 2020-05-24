@@ -1,80 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <!-- Browser Tab Icon -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='img/heart.ico') }}" />
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <!-- Compiled and minified CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
+	<!-- Browser Tab Icon -->
+	<link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='img/heart.ico') }}" />
 
-    <!-- Materialize Icon CSS -->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
 
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-      type="text/css"
-    />
+	<!-- Materialize Icon CSS -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+		type="text/css" />
 
-    <!-- Static CSS -->
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/style.css') }}"
-      type="text/css"
-    />
-    <title>Inspire Quote</title>
-  </head>
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <body>
-    <!-- Navigation -->
-    <nav>
-      <div class="nav-wrapper">
-        <a href="{{ url_for('index') }}" class="brand-logo">InspireQuote</a>
-        <a href="#" data-target="slide-out" class="sidenav-trigger"
-          ><i class="material-icons">menu</i></a
-        >
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="{{ url_for('index') }}">Home</a></li>
-          <li><a href="{{ url_for('new_inspire') }}">New Inspire</a></li>
-          <li><a href="{{ url_for('category') }}">Category</a></li>
-          <li><a href="{{ url_for('about') }}">About</a></li>
-        </ul>
-        <ul id="slide-out" class="sidenav">
-          <li><a href="{{ url_for('index') }}">Home</a></li>
-          <li><a href="{{ url_for('new_inspire') }}">New Inspire</a></li>
-          <li><a href="{{ url_for('category') }}">Category</a></li>
-          <li><a href="{{ url_for('about') }}">About</a></li>
-        </ul>
-      </div>
-    </nav>
+	<!-- Static CSS -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css" />
+	<title>Inspire Quote</title>
+</head>
 
-    <!-- Main Content -->
-    <div class="container">
-      {% block content%} {% endblock %}
-    </div>
+<body>
+	<!-- Navigation -->
+	<nav>
+		<div class="nav-wrapper">
+			<a href="{{ url_for('index') }}" class="brand-logo">InspireQuote</a>
+			<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><a href="{{ url_for('index') }}">Home</a></li>
+				<li><a href="{{ url_for('new_inspire') }}">New Inspire</a></li>
+				<li><a href="{{ url_for('category') }}">Category</a></li>
+				<li><a href="{{ url_for('about') }}">About</a></li>
+			</ul>
+			<ul id="slide-out" class="sidenav">
+				<li><a href="{{ url_for('index') }}">Home</a></li>
+				<li><a href="{{ url_for('new_inspire') }}">New Inspire</a></li>
+				<li><a href="{{ url_for('category') }}">Category</a></li>
+				<li><a href="{{ url_for('about') }}">About</a></li>
+			</ul>
+		</div>
+	</nav>
 
-    <!-- Footer -->
-    <footer class="footer-copyright">
-      <p>Copyright © 2020 InspireQuote</p>
-    </footer>
+	<!-- Main Content -->
+	<div class="container">
+		{% block content%} {% endblock %}
+	</div>
 
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
-    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  </body>
+	<!-- Footer -->
+	<footer class="footer-copyright">
+		<p>Copyright © 2020 InspireQuote</p>
+	</footer>
+
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript">
+		$(document).ready(function () {
+            $(".collapsible").collapsible();
+            $(".sidenav").sidenav();
+            $("select").formSelect();
+            $(".carousel.carousel-slider").carousel({
+                fullWidth: true,
+                indicators: true,
+                dist: 0,
+            });
+            window.setInterval(function () {
+                $(".carousel").carousel("next");
+            }, 5500);
+        });
+        
+        function copyToClipboard(e) {
+            var copyText = document.getElementById(e);
+            copyText.select();
+            document.execCommand("copy");
+        };
+	</script>
+</body>
 </html>

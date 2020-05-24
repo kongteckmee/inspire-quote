@@ -1,21 +1,21 @@
 import os
-from os import path
 from flask import Flask, render_template, redirect, request, url_for
-from flask_pymongo import PyMongo, pymongo
+from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
-if os.path.exists("env.py"):
-    import env
-
+# Flask App
 app = Flask(__name__)
 
+# Mongo Variables
 app.config["MONGO_URI"] = os.getenv('MONGO_URI')
 app.config["SECRET_KEY"] = os.getenv('SECRET_KEY')
 DBS_NAME = "inspire_quote"
 
+# PyMongo Instance
 mongo = PyMongo(app)
 
 
+# Main Page & Inspire Quote
 @app.route('/')
 @app.route('/index')
 def index():
@@ -36,7 +36,7 @@ def insert_inspire():
 
 @app.route('/edit_inspire/<quote_id>')
 def edit_inspire(quote_id):
-    the_quote = mongo.db.quote.find_one({"_id": ObjectId(quote_id)})
+    the_quote = mongo.db.quote.find_one({'_id': ObjectId(quote_id)})
     all_category = mongo.db.category.find()
     return render_template("edit_inspire.html", quote=the_quote, categories=all_category)
 
@@ -45,7 +45,7 @@ def edit_inspire(quote_id):
 def update_inspire(quote_id):
     quotes = mongo.db.quote
     quotes.update({'_id': ObjectId(quote_id)},
-    {
+                  {
         'quote': request.form.get('quote'),
         'category_name': request.form.get('category_name'),
         'description': request.form.get('description'),
@@ -60,6 +60,7 @@ def delete_inspire(quote_id):
     return redirect(url_for('index'))
 
 
+# Categories of Inspire Quote
 @app.route('/category')
 def category():
     return render_template("category.html", categories=mongo.db.category.find())
@@ -97,12 +98,14 @@ def delete_category(category_id):
     return redirect(url_for('category'))
 
 
+# About Inspire Quote
 @app.route('/about')
 def about():
     return render_template("about.html")
 
 
+# IP Address & Port Number
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=False)

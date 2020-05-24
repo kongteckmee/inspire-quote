@@ -2,16 +2,11 @@
 <div class="row">
 	<div class="col s4">
 		<div class="carousel carousel-slider center">
-			<a class="carousel-item" href="#"><img src="{{ url_for('static', filename='img/c1.png') }}"
-      /></a>
-				<a class="carousel-item" href="#"><img src="{{ url_for('static', filename='img/c2.png') }}"
-      /></a>
-					<a class="carousel-item" href="#"><img src="{{ url_for('static', filename='img/c3.png') }}"
-      /></a>
-						<a class="carousel-item" href="#"><img src="{{ url_for('static', filename='img/c4.png') }}"
-      /></a>
-							<a class="carousel-item" href="#"><img src="{{ url_for('static', filename='img/c5.png') }}"
-      /></a>
+			<a class="carousel-item"><img src="{{ url_for('static', filename='img/c1.png') }}"/></a>
+			<a class="carousel-item"><img src="{{ url_for('static', filename='img/c2.png') }}"/></a>
+			<a class="carousel-item"><img src="{{ url_for('static', filename='img/c3.png') }}"/></a>
+			<a class="carousel-item"><img src="{{ url_for('static', filename='img/c4.png') }}"/></a>
+			<a class="carousel-item"><img src="{{ url_for('static', filename='img/c5.png') }}"/></a>
 		</div>
 	</div>
 	<div class="col s8">
@@ -49,11 +44,4 @@
 		</div>
 	</div>
 </div>
-<script>
-	function copyToClipboard(e) {
-        var copyText = document.getElementById(e);
-        copyText.select();
-        document.execCommand("copy");
-  };
-</script>
 {% endblock %}
