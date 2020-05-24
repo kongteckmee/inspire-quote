@@ -1,14 +1,11 @@
+/* Import Google font */
 @import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
 
+/* --- Set the padding, margin & width, and set the default font & color for texts & background --- */
 * {
   margin: 0;
   padding: 0;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-.container {
-  margin: 0 auto;
-  width: 100%;
 }
 
 body {
@@ -16,6 +13,13 @@ body {
   color: #28334aff;
 }
 
+.container {
+  margin: 0 auto;
+  width: 95%;
+  height: 700px;
+}
+
+/* --- Navbar & Footer --- */
 div a {
   text-decoration: none;
 }
@@ -27,19 +31,28 @@ div a {
   margin: 0 0 0 15px;
 }
 
-nav .brand-logo,
-nav li a,
-.footer-copyright p,
-.sidenav li a {
-  color: #e7ebe0ff;
-}
-
 .nav-wrapper,
-.footer-copyright,
-.sidenav {
+.sidenav,
+.footer-copyright {
   background-color: #a13941ff;
   font-weight: bold;
 }
+
+nav .brand-logo,
+nav li a,
+.sidenav li a,
+.footer-copyright p {
+  color: #e7ebe0ff;
+}
+
+.footer-copyright {
+  /* position: fixed; */
+  bottom: 0;
+  width: 100%;
+  line-height: 40px;
+  text-align: center;
+}
+
 
 .carousel {
   width: 85%;
@@ -129,6 +142,7 @@ i:focus {
   margin-top: 5px;
 }
 
+/* --- About Page --- */
 .about-inspire {
   margin: 0 50px 0 50px;
   text-align: center;
@@ -148,13 +162,7 @@ i:focus {
   background-color: #0e76a8;
 }
 
-.footer-copyright {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  line-height: 40px;
-  text-align: center;
-}
+
 
 .center p {
   float: left;
