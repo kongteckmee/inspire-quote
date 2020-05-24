@@ -16,7 +16,6 @@ body {
 .container {
   margin: 0 auto;
   width: 95%;
-  height: 700px;
 }
 
 /* --- Navbar & Footer --- */
@@ -46,14 +45,14 @@ nav li a,
 }
 
 .footer-copyright {
-  /* position: fixed; */
+  position: fixed;
   bottom: 0;
   width: 100%;
   line-height: 40px;
   text-align: center;
 }
 
-
+/* --- Materialize Carousel --- */
 .carousel {
   width: 85%;
   border: 1px solid #f0eceb;
@@ -63,6 +62,7 @@ nav li a,
   margin: 30px 0 50px 0;
 }
 
+/* --- Page Title & Subtitle --- */
 h3 {
   text-align: center;
   font-weight: bold;
@@ -79,17 +79,18 @@ h5 {
   text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0, 0, 0, 0.15);
 }
 
-.collapsible-header,
-.collapsible-body {
-  background-color: #aa863a;
-  color: #f0eceb;
-}
-
+/* --- Materialize Collapsible --- */
 .collapsible {
   height: 50vh;
   overflow-y: scroll;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.collapsible-header,
+.collapsible-body {
+  background-color: #aa863a;
+  color: #f0eceb;
 }
 
 .collapsible-body {
@@ -104,39 +105,38 @@ h5 {
   font-weight: bold;
 }
 
-.collapse-button a:hover,
-.collapse-button a:focus,
-.collapse-button button:hover,
-.collapse-button button:focus {
-  background-color: #e0e0e0;
-  color: #e6af4b;
-}
-
+/* --- Materialize Button --- */
 .button {
   background-color: #aa863a;
   color: #f0eceb;
   font-weight: bold;
 }
 
+.collapse-button a:hover,
+.collapse-button a:focus,
+.collapse-button button:hover,
+.collapse-button button:focus,
 .button:hover,
 .button:focus {
   background-color: #e0e0e0;
   color: #e6af4b;
 }
 
+/* --- User Select to the Quote or Description --- */
 .user-select {
   user-select: all;
 }
 
+/* --- Materialize Icon Color & Shadow --- */
 .input-field i,
 i:focus {
   color: #e6af4b;
   text-shadow: 5px 5px 5px black;
 }
 
-.inspire-text {
+/* .inspire-text {
   color: #e0e0e0;
-}
+} */
 
 .category {
   margin-top: 5px;
@@ -160,10 +160,4 @@ i:focus {
 
 .about-developer .linkedin {
   background-color: #0e76a8;
-}
-
-
-
-.center p {
-  float: left;
 }
