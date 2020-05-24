@@ -73,10 +73,9 @@ h3 span {
   font-weight: bold;
 }
 
-h5 {
+h5, h4 {
   text-align: center;
   font-weight: bold;
-  text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0, 0, 0, 0.15);
 }
 
 /* --- Materialize Collapsible --- */
