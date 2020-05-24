@@ -56,7 +56,7 @@ def update_inspire(quote_id):
 
 @app.route('/delete_inspire/<quote_id>')
 def delete_inspire(quote_id):
-    mongo.db.quote.remove({"_id": ObjectId(quote_id)})
+    mongo.db.quote.remove({'_id': ObjectId(quote_id)})
     return redirect(url_for('index'))
 
 
@@ -80,7 +80,7 @@ def insert_category():
 
 @app.route('/edit_category/<category_id>')
 def edit_category(category_id):
-    the_category = mongo.db.category.find_one({"_id": ObjectId(category_id)})
+    the_category = mongo.db.category.find_one({'_id': ObjectId(category_id)})
     return render_template("edit_category.html", category=the_category)
 
 
@@ -94,7 +94,7 @@ def update_category(category_id):
 
 @app.route('/delete_category/<category_id>')
 def delete_category(category_id):
-    mongo.db.category.remove({"_id": ObjectId(category_id)})
+    mongo.db.category.remove({'_id': ObjectId(category_id)})
     return redirect(url_for('category'))
 
 
