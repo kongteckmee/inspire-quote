@@ -36,9 +36,31 @@ The wireframes were created at the beginning of the project. The final site are 
 
 ## Features
 ### Existing Features
+##### Features 1 - Materialize Navbar with Logo & Menu
+##### Features 2 - Footer
+##### Features 3 - Materialize Carousel, Collapsible & Sidenav
+##### Features 4 - Materialize Button, Icon & Font Awesome Icon
+##### Features 5 - Materialize Text Input & Form Select
+##### Features 6 - Data in MongoDB
+
 ### Future Features
+##### User Login
+##### Restriction in Data Deletion
 
 ## Technologies Used
+#### [Balsamiq](https://balsamiq.com/)
+#### [Gitpod Online IDE](https://www.gitpod.io/)
+#### [Materialize 1.0.0](https://materializecss.com/)
+#### [Google Font](https://fonts.google.com/)
+#### [FontAwesome](https://fontawesome.com/)
+#### [HTML5](https://en.wikipedia.org/wiki/HTML5) & [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets#CSS_3)
+#### [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+#### [Python 3](https://www.python.org/)
+#### [favicon.cc](https://www.favicon.cc/)
+#### [FLATICON](https://www.flaticon.com/)
+#### [Git & GitHub](https://github.com/)
+#### [MongoDB](https://www.mongodb.com/)
+#### [Heroku](https://heroku.com/)
 
 ## Testing
 ### Known Issues
