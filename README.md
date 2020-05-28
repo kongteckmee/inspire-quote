@@ -37,30 +37,79 @@ The wireframes were created at the beginning of the project. The final site are 
 ## Features
 ### Existing Features
 ##### Features 1 - Materialize Navbar with Logo & Menu
+- **Materialize Navbar with Logo:** Containing the name of the site. The site will reload or back to Home page when user click on it.
+- **Materialize Menu** Display the main pages of the site. The user can go to each page by select each of it.
+
 ##### Features 2 - Footer
+- The footer contain a short line of text for copyright notice.
+
 ##### Features 3 - Materialize Carousel, Collapsible & Sidenav
+- **Materialize Carousel:** Used to present the 5 images in quote in 5.5 seconds each or swiping by the user.
+- **Materialize Collapsible:** Used to hide the description and will be expanded when clicked on. 
+- **Materialize Sidenav:** Used as the slide out menu in tablet or in mobile view.
+
 ##### Features 4 - Materialize Button, Icon & Font Awesome Icon
+- **Materialize Button:** Used to add, edit, submit and delete the data at database.
+- **Materialize Icon:** Used to display as icon at the page of the site.
+- **Font Awesome Icon:** Used to display GitHub page for this project and the Linkedin account for developer.
+
 ##### Features 5 - Materialize Text Input & Form Select
+- **Materialize Text Input:** Used to receive user inputted data.
+- **Materialize Form Select:** Used to present specified options for user input.
+
 ##### Features 6 - Data in MongoDB
+- Data in NoSQL, the document-based database has been used to display the information on 30 ready quotes at the site.
 
 ### Future Features
 ##### User Login
-##### Restriction in Data Deletion
+- The user login can be implemented to let the registered user to have their own account and to work on their own quotes at the database.
+
+##### Warning during Data Deletion
+- A warning can be displayed when the user decided to delete a quote by click on Delete button. This is to avoid the accidentally of quote deletion.
 
 ## Technologies Used
 #### [Balsamiq](https://balsamiq.com/)
+- Balsamiq was used to design and create the wireframes before starting this project.
+
 #### [Gitpod Online IDE](https://www.gitpod.io/)
+- Gitpod Online IDE was used to write the HTML5, CSS3, JavaScript and Python 3.
+
 #### [Materialize 1.0.0](https://materializecss.com/)
+- Materialize 1.0.0 used for responsive front-end layout based on Material Design.
+
 #### [Google Font](https://fonts.google.com/)
+- Google Fonts: Courgette imported to the site to be the font for site logo.
+
 #### [FontAwesome](https://fontawesome.com/)
+- Font Awesome used to provide the icons for Github and Linkedin.
+
 #### [HTML5](https://en.wikipedia.org/wiki/HTML5) & [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets#CSS_3)
+- HTML5 used to create the layout for each of the page for the site.
+- CSS3 used to style the layout of the site.
+
 #### [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+- JavaScript used to set the primary function of the site for user interaction.
+
 #### [Python 3](https://www.python.org/)
+- Python 3 used to develop the site and connect the site to MongoDB.
+
 #### [favicon.cc](https://www.favicon.cc/)
+- Favicon used to convert image to .ico format to be used as the icon at the browser tab.
+
 #### [FLATICON](https://www.flaticon.com/)
-#### [Git & GitHub](https://github.com/)
+- Flaticon used to get the image for the icon at the browser tab in .png format.
+
+#### [Design Wizard](https://www.designwizard.com/template/recreation/inspirational-quotes-images/)
+- Design Wizard used to design and create the inspirational quote images in carousel at the site.
+
 #### [MongoDB](https://www.mongodb.com/)
+- MongoDB that classified as a NoSQL database program, used as the database to the site. 
+
+#### [Git & GitHub](https://github.com/)
+- Git used for version control, and Github used as a remote repository.
+
 #### [Heroku](https://heroku.com/)
+- Heroku used as the hosting of the site.
 
 ## Testing
 ### Known Issues
@@ -69,6 +118,16 @@ The wireframes were created at the beginning of the project. The final site are 
 
 ## Credits
 ### Content
-### Media
-### Acknowledgements
+- The site was designed and completed by myself. All text and quote were written with reference on:
+    - [BrightDrops](https://brightdrops.com/daily-inspirational-quotes)
+    - [Brian Tracy](https://www.briantracy.com/blog/personal-success/26-motivational-quotes-for-success/)
 
+### Media
+- The carousel images was sourced and designed by using [Design Wizard](https://www.designwizard.com/template/recreation/inspirational-quotes-images/).
+- The browser icon for the site was sourced from [FLATICON](https://www.flaticon.com/).
+
+### Acknowledgements
+- Special thanks to [Dick Vlaanderen](https://github.com/dickvla), my mentor from Code Institute, for his valuable advice and guidance.
+- Thank you to the Tutor Support at Code Institute for the valuable feedback.
+- The idea of the site mainly from myself with the reference of [BrightDrops](https://brightdrops.com/daily-inspirational-quotes) and [Brian Tracy](https://www.briantracy.com/blog/personal-success/26-motivational-quotes-for-success/).
+- In the middle of the project, I refer to [w3schools.com](https://www.w3schools.com/), [stackoverflow](https://stackoverflow.com/) and the videl lessons from [Code Institute](https://codeinstitute.net/).
