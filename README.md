@@ -130,4 +130,4 @@ The wireframes were created at the beginning of the project. The final site are 
 - Special thanks to [Dick Vlaanderen](https://github.com/dickvla), my mentor from Code Institute, for his valuable advice and guidance.
 - Thank you to the Tutor Support at Code Institute for the valuable feedback.
 - The idea of the site mainly from myself with the reference of [BrightDrops](https://brightdrops.com/daily-inspirational-quotes) and [Brian Tracy](https://www.briantracy.com/blog/personal-success/26-motivational-quotes-for-success/).
-- In the middle of the project, I refer to [w3schools.com](https://www.w3schools.com/), [stackoverflow](https://stackoverflow.com/) and the videl lessons from [Code Institute](https://codeinstitute.net/).
+- In the middle of the project, I refer to [w3schools.com](https://www.w3schools.com/), [stackoverflow](https://stackoverflow.com/) and the video lessons from [Code Institute](https://codeinstitute.net/).
