@@ -122,9 +122,9 @@ This is to ensure the site to display the errors to notify what caused the crash
 
 Various tests have been done to ensure the site is working properly. Throughout the test, the site rendering well at most of tested devices and the CRUD behaves as intended.
 
-This is the [test sheet](testing/Test Sheet.xlsx)
+This is the [test sheet](testing/test-sheet.xlsx)
 
-<img src="testing/Test Sheet.png" align=top width=750>
+<img src="testing/test-sheet.png" align=top width=750>
 
 Once the CRUD functions was in placed, I have tested each of it at the Inspire Quote and Category in multiple times and to perform unexpected. From here I have ensured the CRUD functions at the site is working as intended.
 
@@ -136,7 +136,8 @@ Chrome DevTools were used to test the responsiveness of the site on Galaxy Note 
 
 The site also been tested by walking through each user story. The users were able to do everything that mentioned at the user story.
 
-### Known Issues
+### Known Issue
+The Carousel is not loaded properly in the browser. I will need to reload few times in order to get the Carousel to work as expected.
 
 ## Deployment
 During the deployment of the site, I have to ensure the below:
