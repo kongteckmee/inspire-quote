@@ -79,8 +79,8 @@ The wireframes were created at the beginning of the project. The final site are 
 
 #### [Materialize Social](https://terrymooreii.github.io/materialize-social/)
 - Materialize Social used to implement the FontAwesome icon as the social login buttons for Materialize to Github and Linkedin. To do this, I have installed:
-`npm install --save materialize-social`<br>
-`bower install --save materialize-social`
+<br>`npm install --save materialize-social`
+<br>`bower install --save materialize-social`
 
 #### [Google Font](https://fonts.google.com/)
 - Google Fonts: Courgette imported to the site to be the font for site logo.
