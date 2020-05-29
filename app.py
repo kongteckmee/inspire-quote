@@ -15,20 +15,28 @@ DBS_NAME = "inspire_quote"
 mongo = PyMongo(app)
 
 
-# Main Page & Inspire Quote
 @app.route('/')
 @app.route('/index')
 def index():
+    """
+    Main Page
+    """
     return render_template("index.html", quotes=mongo.db.quote.find())
 
 
 @app.route('/new_inspire')
 def new_inspire():
+    """
+    Inspire Quote Page
+    """
     return render_template("new_inspire.html", categories=mongo.db.category.find())
 
 
 @app.route('/insert_inspire', methods=['POST'])
 def insert_inspire():
+    """
+    Add New Inspire Quote
+    """
     inspires = mongo.db.quote
     inspires.insert_one(request.form.to_dict())
     return redirect(url_for('index'))
@@ -36,6 +44,9 @@ def insert_inspire():
 
 @app.route('/edit_inspire/<quote_id>')
 def edit_inspire(quote_id):
+    """
+    Edit Inspire Quote
+    """
     the_quote = mongo.db.quote.find_one({'_id': ObjectId(quote_id)})
     all_category = mongo.db.category.find()
     return render_template("edit_inspire.html", quote=the_quote, categories=all_category)
@@ -43,9 +54,12 @@ def edit_inspire(quote_id):
 
 @app.route('/update_inspire/<quote_id>', methods=['POST'])
 def update_inspire(quote_id):
+    """
+    Update Inspire Quote in MongoDB
+    """
     quotes = mongo.db.quote
     quotes.update({'_id': ObjectId(quote_id)},
-                  {
+    {
         'quote': request.form.get('quote'),
         'category_name': request.form.get('category_name'),
         'description': request.form.get('description'),
@@ -56,23 +70,34 @@ def update_inspire(quote_id):
 
 @app.route('/delete_inspire/<quote_id>')
 def delete_inspire(quote_id):
+    """
+    Delete Inspire Quote
+    """
     mongo.db.quote.remove({'_id': ObjectId(quote_id)})
     return redirect(url_for('index'))
 
 
-# Categories of Inspire Quote
 @app.route('/category')
 def category():
+    """
+    Category Page
+    """
     return render_template("category.html", categories=mongo.db.category.find())
 
 
 @app.route('/add_category')
 def add_category():
+    """
+    New Category Page
+    """
     return render_template("add_category.html")
 
 
 @app.route('/insert_category', methods=['POST'])
 def insert_category():
+    """
+    Add New Category
+    """
     category = mongo.db.category
     category.insert_one(request.form.to_dict())
     return redirect(url_for('category'))
@@ -80,12 +105,18 @@ def insert_category():
 
 @app.route('/edit_category/<category_id>')
 def edit_category(category_id):
+    """
+    Edit Category
+    """
     the_category = mongo.db.category.find_one({'_id': ObjectId(category_id)})
     return render_template("edit_category.html", category=the_category)
 
 
 @app.route('/update_category/<category_id>', methods=['POST'])
 def update_category(category_id):
+    """
+    Update Category in MongoDB
+    """
     mongo.db.category.update(
         {'_id': ObjectId(category_id)},
         {'category_name': request.form.get('category_name')})
@@ -94,13 +125,18 @@ def update_category(category_id):
 
 @app.route('/delete_category/<category_id>')
 def delete_category(category_id):
+    """
+    Delete Category
+    """
     mongo.db.category.remove({'_id': ObjectId(category_id)})
     return redirect(url_for('category'))
 
 
-# About Inspire Quote
 @app.route('/about')
 def about():
+    """
+    About Page
+    """
     return render_template("about.html")
 
 
