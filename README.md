@@ -77,11 +77,13 @@ The wireframes were created at the beginning of the project. The final site are 
 #### [Materialize 1.0.0](https://materializecss.com/)
 - Materialize 1.0.0 used for responsive front-end layout based on Material Design.
 
+#### [Materialize Social](https://terrymooreii.github.io/materialize-social/)
+- Materialize Social used to implement the FontAwesome icon as the social login buttons for Materialize to Github and Linkedin. To do this, I have installed:
+`npm install --save materialize-social`<br>
+`bower install --save materialize-social`
+
 #### [Google Font](https://fonts.google.com/)
 - Google Fonts: Courgette imported to the site to be the font for site logo.
-
-#### [FontAwesome](https://fontawesome.com/)
-- Font Awesome used to provide the icons for Github and Linkedin.
 
 #### [HTML5](https://en.wikipedia.org/wiki/HTML5) & [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets#CSS_3)
 - HTML5 used to create the layout for each of the page for the site.
@@ -124,7 +126,15 @@ This is the [test sheet](testing/Test Sheet.xlsx)
 
 <img src="testing/Test Sheet.png" align=top width=750>
 
+Once the CRUD functions was in placed, I have tested each of it at the Inspire Quote and Category in multiple times and to perform unexpected. From here I have ensured the CRUD functions at the site is working as intended.
 
+The Validators for HTML, CSS & JS are used, no warning or error found. Yet, the warnings or errors are there due to missing lang, doctype, header and bad value found caused by the jinja quote at the render templates. I cannot do anything to this as we need to create every HTML page by referring to the base.html.
+
+Browser on Chrome, Firefox and IE were used to test the browser compatibility. The site displayed without any issue, except to the IE that showing the color issue at the Navbar and the Footer.
+
+Chrome DevTools were used to test the responsiveness of the site on Galaxy Note 3, iPhone 6/7/8 Plus and iPad Mini. There is no issue encountered.
+
+The site also been tested by walking through each user story. The users were able to do everything that mentioned at the user story.
 
 ### Known Issues
 
