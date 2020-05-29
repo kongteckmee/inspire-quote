@@ -112,6 +112,17 @@ The wireframes were created at the beginning of the project. The final site are 
 - Heroku used as the hosting of the site.
 
 ## Testing
+The site testing was done throughout the development by using a test sheet in Excel file. To get this done, I have set 
+```python 
+debug=True
+```
+This is to ensure the site to display the errors to notify what caused the crash.
+
+Various tests have been done to ensure the site is working properly. Throughout the test, the site rendering well at most of tested devices and the CRUD behaves as intended.
+
+This is the [test sheet](testing/)
+
+
 
 ### Known Issues
 
