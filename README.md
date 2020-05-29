@@ -112,9 +112,18 @@ The wireframes were created at the beginning of the project. The final site are 
 - Heroku used as the hosting of the site.
 
 ## Testing
+
 ### Known Issues
 
 ## Deployment
+During the deployment of the site, I have to ensure the below:
+1. At Heroku, create new app named inspire-quote and go to Deploy tab. At the Deployment Method section, select GitHub. After the Connect to GitHub section is shown, fill in the repo-name of the site at GitHub and click Search. Connect to the correct repo at GitHub. Upon successul on the deployment, Heroku will give the URL that hosted the site at Domains section under Settings tab.
+2. Removing all the environment variables to the MONGO_URI and the SECRET_KEY. These 2 were placed in env.py during the development and have been entered to Config Vars at Heroku for deployment.
+3. Make sure the requirements.txt is up-to-date with all the latest packages installed for the site by using `pip3 freeze > requirements.txt`
+4. Creating Procfile that required by Heroku to run the site by using `echo web: python app.py > Procfile`
+5. Set the Flask debugging to False.
+6. Push all the updated code to Github.
+7. All the updated code that have been pushed to GitHub will be updated automatically to the deployed site at Heroku.
 
 ## Credits
 ### Content
