@@ -13,9 +13,8 @@ $(document).ready(function () {
     $(".carousel.carousel-slider").carousel({
         fullWidth: true,
         indicators: true,
-        dist: 0,
+        dist: 0
     });
-    
     window.setInterval(function () {
         $(".carousel").carousel("next");
     }, 5500);
