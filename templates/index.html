@@ -4,11 +4,11 @@
     <!-- Materialize Carousel -->
 	<div class="col m4">
 		<div class="carousel carousel-slider center">
-			<a class="carousel-item"><img src="{{ url_for('static', filename='img/c1.png') }}"/></a>
-			<a class="carousel-item"><img src="{{ url_for('static', filename='img/c2.png') }}"/></a>
-			<a class="carousel-item"><img src="{{ url_for('static', filename='img/c3.png') }}"/></a>
-			<a class="carousel-item"><img src="{{ url_for('static', filename='img/c4.png') }}"/></a>
-			<a class="carousel-item"><img src="{{ url_for('static', filename='img/c5.png') }}"/></a>
+			<a class="carousel-item"><img src="{{ url_for('static', filename='img/c1.png') }}" alt="Carousel 1"/></a>
+			<a class="carousel-item"><img src="{{ url_for('static', filename='img/c2.png') }}" alt="Carousel 2"/></a>
+			<a class="carousel-item"><img src="{{ url_for('static', filename='img/c3.png') }}" alt="Carousel 3"/></a>
+			<a class="carousel-item"><img src="{{ url_for('static', filename='img/c4.png') }}" alt="Carousel 4"/></a>
+			<a class="carousel-item"><img src="{{ url_for('static', filename='img/c5.png') }}" alt="Carousel 5"/></a>
 		</div>
 	</div>
 
@@ -33,7 +33,7 @@
 					</div>
 				</div>
 				<div class="collapsible-body">
-					<span><b>Description: </b><br><p class="user-select">{{ quote.description }}</p></span><br>
+					<b>Description: </b><br><p class="user-select">{{ quote.description }}</p><br>
 					<span class="right">(<b>By: </b>{{ quote.quote_by }})</span><br><br>
 					<div class="collapse-button">
 						<input id="{{ quote._id }}" type="hidden" value="{{ quote.quote }}">
@@ -54,7 +54,7 @@
 </div>
 
 <!-- Copy to Clipboard for Selected Text(s) -->
-<script type="text/javascript">
+<script>
     function copyToClipboard(e) {
         var copyText = document.getElementById(e);
         copyText.select();
