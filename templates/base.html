@@ -6,33 +6,52 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <!-- Browser Tab Icon -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='img/heart.ico') }}" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="{{ url_for('static', filename='img/heart.ico') }}"
+    />
 
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
 
     <!-- Materialize Icon CSS -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css"/>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      type="text/css"
+    />
 
     <!-- Website is optimized for mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Static CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css"/>
-    
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+      type="text/css"
+    />
+
     <title>Inspire Quote</title>
   </head>
 
   <body>
-  
     <!-- Navigation Bar -->
     <nav>
       <div class="nav-wrapper">
         <a href="{{ url_for('index') }}" class="brand-logo">InspireQuote</a>
-        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <a href="#" data-target="slide-out" class="sidenav-trigger"
+          ><i class="material-icons">menu</i></a
+        >
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a href="{{ url_for('index') }}">Home</a></li>
           <li><a href="{{ url_for('new_inspire') }}">New Inspire</a></li>

@@ -162,35 +162,35 @@ i:focus {
 }
 
 /* --- Media Queries - Tablet Size --- */
-@media (min-width: 768px) and (max-width: 1024px) { 
-    .carousel {
-        margin: 200px 0 0 0;
-    }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .carousel {
+    margin: 200px 0 0 0;
+  }
 
-    .collapsible {
-        height: 35vh;
-    }
+  .collapsible {
+    height: 35vh;
+  }
 
-    .footer-copyright {
-        position: fixed;
-    }
+  .footer-copyright {
+    position: fixed;
+  }
 }
 
 /* --- Media Queries - Mobile Size --- */
 @media (min-width: 360px) and (max-width: 767px) {
-    .container {
-        height: 1000px;
-    }
+  .container {
+    height: 1000px;
+  }
 
-    .carousel {
-        display: none !important;    
-    }
+  .carousel {
+    display: none !important;
+  }
 
-    .collapsible {
-        height: 60vh;
-    }
+  .collapsible {
+    height: 60vh;
+  }
 
-    .collapsible .category {
-        font-size: 70%;
-    }
+  .collapsible .category {
+    font-size: 70%;
+  }
 }

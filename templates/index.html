@@ -1,64 +1,109 @@
 {% extends 'base.html' %} {% block content %}
 <div class="row">
+  <!-- Materialize Carousel -->
+  <div class="col m4">
+    <div class="carousel carousel-slider center">
+      <a class="carousel-item"
+        ><img
+          src="{{ url_for('static', filename='img/c1.png') }}"
+          alt="Carousel 1"
+      /></a>
+      <a class="carousel-item"
+        ><img
+          src="{{ url_for('static', filename='img/c2.png') }}"
+          alt="Carousel 2"
+      /></a>
+      <a class="carousel-item"
+        ><img
+          src="{{ url_for('static', filename='img/c3.png') }}"
+          alt="Carousel 3"
+      /></a>
+      <a class="carousel-item"
+        ><img
+          src="{{ url_for('static', filename='img/c4.png') }}"
+          alt="Carousel 4"
+      /></a>
+      <a class="carousel-item"
+        ><img
+          src="{{ url_for('static', filename='img/c5.png') }}"
+          alt="Carousel 5"
+      /></a>
+    </div>
+  </div>
 
-    <!-- Materialize Carousel -->
-	<div class="col m4">
-		<div class="carousel carousel-slider center">
-			<a class="carousel-item"><img src="{{ url_for('static', filename='img/c1.png') }}" alt="Carousel 1"/></a>
-			<a class="carousel-item"><img src="{{ url_for('static', filename='img/c2.png') }}" alt="Carousel 2"/></a>
-			<a class="carousel-item"><img src="{{ url_for('static', filename='img/c3.png') }}" alt="Carousel 3"/></a>
-			<a class="carousel-item"><img src="{{ url_for('static', filename='img/c4.png') }}" alt="Carousel 4"/></a>
-			<a class="carousel-item"><img src="{{ url_for('static', filename='img/c5.png') }}" alt="Carousel 5"/></a>
-		</div>
-	</div>
+  <!-- Introduction & Inspire Quote in Collapsible -->
+  <div class="col m8">
+    <br />
+    <h3>Welcome to <span>InspireQuote</span></h3>
+    <div class="instruction">
+      <h5>This is a place to quote by you!</h5>
+      <p>Try out the copy button by clicking on the quote or description..</p>
+      <br />
+    </div>
+    <ul class="collapsible">
+      {% for quote in quotes %}
+      <li>
+        <div class="collapsible-header">
+          <i class="material-icons">expand_more</i>
+          <div class="col m9">
+            <span>"<b class="user-select">{{ quote.quote }}</b>"</span>
+          </div>
+          <div class="col m3">
+            <span>{{ quote.category_name }}</span>
+          </div>
+        </div>
+        <div class="collapsible-body">
+          <b>Description: </b><br />
+          <p class="user-select">{{ quote.description }}</p>
+          <br />
+          <span class="right">(<b>By: </b>{{ quote.quote_by }})</span
+          ><br /><br />
+          <div class="collapse-button">
+            <input
+              id="{{ quote._id }}"
+              type="hidden"
+              value="{{ quote.quote }}"
+            />
+            <a
+              href="{{ url_for('delete_inspire', quote_id=quote._id) }}"
+              class="waves-effect waves-light btn btn-small right"
+              >Delete</a
+            >
+            <a
+              href="{{ url_for('edit_inspire', quote_id=quote._id) }}"
+              class="waves-effect waves-light btn btn-small right"
+              >Edit</a
+            >
 
-    <!-- Introduction & Inspire Quote in Collapsible -->
-	<div class="col m8">
-		<br>
-		<h3>Welcome to <span>InspireQuote</span></h3>
-        <div class="instruction">
-            <h5>This is a place to quote by you!</h5>
-            <p>Try out the copy button by clicking on the quote or description..</p><br>
-        </div>		
-		<ul class="collapsible">
-			{% for quote in quotes %}
-			<li>
-				<div class="collapsible-header">
-					<i class="material-icons">expand_more</i>
-					<div class="col m9">
-						<span>"<b class="user-select">{{ quote.quote }}</b>"</span>
-					</div>
-					<div class="col m3">
-						<span>{{ quote.category_name }}</span>
-					</div>
-				</div>
-				<div class="collapsible-body">
-					<b>Description: </b><br><p class="user-select">{{ quote.description }}</p><br>
-					<span class="right">(<b>By: </b>{{ quote.quote_by }})</span><br><br>
-					<div class="collapse-button">
-						<input id="{{ quote._id }}" type="hidden" value="{{ quote.quote }}">
-						<a href="{{ url_for('delete_inspire', quote_id=quote._id) }}" class="waves-effect waves-light btn btn-small right">Delete</a>
-						<a href="{{ url_for('edit_inspire', quote_id=quote._id) }}" class="waves-effect waves-light btn btn-small right">Edit</a>
-						
-                        <!-- Copy the Quote or the Description -->
-                        <button type="button" onclick="copyToClipboard('{{ quote._id }}')" class="waves-effect waves-light btn btn-small right">Copy</button>
-					</div>
-				</div>
-			</li>
-			{% endfor %}
-		</ul>
-		<div class="input-field">
-			<a href="{{ url_for('new_inspire') }}" class="btn waves-effect waves-light button">Add Inspire</a>
-		</div>
-	</div>
+            <!-- Copy the Quote or the Description -->
+            <button
+              type="button"
+              onclick="copyToClipboard('{{ quote._id }}')"
+              class="waves-effect waves-light btn btn-small right"
+            >
+              Copy
+            </button>
+          </div>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    <div class="input-field">
+      <a
+        href="{{ url_for('new_inspire') }}"
+        class="btn waves-effect waves-light button"
+        >Add Inspire</a
+      >
+    </div>
+  </div>
 </div>
 
 <!-- Copy to Clipboard for Selected Text(s) -->
 <script>
-    function copyToClipboard(e) {
-        var copyText = document.getElementById(e);
-        copyText.select();
-        document.execCommand("copy");
-    };
+  function copyToClipboard(e) {
+    var copyText = document.getElementById(e);
+    copyText.select();
+    document.execCommand("copy");
+  }
 </script>
 {% endblock %}
