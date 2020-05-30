@@ -124,7 +124,7 @@ Various tests have been done to ensure the site is working properly. Throughout 
 
 This is the [test sheet](testing/test-sheet.xlsx)
 
-<img src="testing/test-sheet.png" align=top width=750>
+<img src="testing/test-sheet.JPG" align=top width=750>
 
 Once the CRUD functionality was in placed, I have tested each of it at the Inspire Quote and Category in multiple times and to perform unexpected. From here I have ensured the CRUD functionality at the site is working as intended.
 
