@@ -37,20 +37,20 @@ The wireframes were created at the beginning of the project. The final site are 
 ## Features
 ### Existing Features
 ##### Features 1 - Materialize Navbar with Logo & Menu
-- **Materialize Navbar with Logo:** Containing the name of the site. The site will reload or back to Home page when user click on it.
+- **Materialize Navbar with Logo:** Containing the name of the site. The site will reload or back to the Home page when user click on it.
 - **Materialize Menu** Display the main pages of the site. The user can go to each page by select each of it.
 
 ##### Features 2 - Footer
 - The footer contain a short line of text for copyright notice.
 
 ##### Features 3 - Materialize Carousel, Collapsible & Sidenav
-- **Materialize Carousel:** Used to present the 5 images in quote in 5.5 seconds each or swiping by the user.
+- **Materialize Carousel:** Used to present the 5 inspirational quoting images in quote in 5.5 seconds each or swiping by the user.
 - **Materialize Collapsible:** Used to hide the description and will be expanded when clicked on. 
 - **Materialize Sidenav:** Used as the slide out menu in tablet or in mobile view.
 
 ##### Features 4 - Materialize Button, Icon & Font Awesome Icon
-- **Materialize Button:** Used to add, edit, submit and delete the data at database.
-- **Materialize Icon:** Used to display as icon at the page of the site.
+- **Materialize Button:** Used to add, edit, submit and delete the data at the database by using the site.
+- **Materialize Icon:** Used to display as icon at the pages of the site.
 - **Font Awesome Icon:** Used to display GitHub page for this project and the Linkedin account for developer.
 
 ##### Features 5 - Materialize Text Input & Form Select
@@ -102,7 +102,7 @@ The wireframes were created at the beginning of the project. The final site are 
 - Flaticon used to get the image for the icon at the browser tab in .png format.
 
 #### [Design Wizard](https://www.designwizard.com/template/recreation/inspirational-quotes-images/)
-- Design Wizard used to design and create the inspirational quote images in carousel at the site.
+- Design Wizard used to design and create the inspirational quoting images in carousel at the site.
 
 #### [MongoDB](https://www.mongodb.com/)
 - MongoDB that classified as a NoSQL database program, used as the database to the site. 
@@ -126,9 +126,9 @@ This is the [test sheet](testing/test-sheet.xlsx)
 
 <img src="testing/test-sheet.png" align=top width=750>
 
-Once the CRUD functions was in placed, I have tested each of it at the Inspire Quote and Category in multiple times and to perform unexpected. From here I have ensured the CRUD functions at the site is working as intended.
+Once the CRUD functionality was in placed, I have tested each of it at the Inspire Quote and Category in multiple times and to perform unexpected. From here I have ensured the CRUD functionality at the site is working as intended.
 
-The Validators for HTML, CSS & JS are used, no warning or error found. Yet, the warnings or errors are there due to missing lang, doctype, header and bad value found caused by the jinja quote at the render templates. I cannot do anything to this as we need to create every HTML page by referring to the base.html.
+The Validators for HTML, CSS and JS are used, no warning or error found. Yet, the warnings or errors are there due to missing lang, doctype, header and bad value found caused by the jinja quote at the render templates. I cannot do anything to this as we need to create every HTML page by referring to the base.html.
 
 Browser on Chrome, Firefox and IE were used to test the browser compatibility. The site displayed without any issue, except to the IE that showing the color issue at the Navbar and the Footer.
 
@@ -136,31 +136,32 @@ Chrome DevTools were used to test the responsiveness of the site on Galaxy Note 
 
 The site also been tested by walking through each user story. The users were able to do everything that mentioned at the user story.
 
-### Known Issue
-The Carousel is not loaded properly in the browser. I will need to reload few times in order to get the Carousel to work as expected.
+### Known Issues
+- The Carousel is not loaded properly in the browser. I will need to reload few times in order to get the Carousel to work as expected.
+- The margin for the Footer will be shown differently due to the lower margin of Carousel or the Add Inspire button. I will need to reopen or refresh the site to get the correct margin of the Footer.
 
 ## Deployment
 During the deployment of the site, I have to ensure the below:
-1. At Heroku, create new app named inspire-quote and go to Deploy tab. At the Deployment Method section, select GitHub. After the Connect to GitHub section is shown, fill in the repo-name of the site at GitHub and click Search. Connect to the correct repo at GitHub. Upon successul on the deployment, Heroku will give the URL that hosted the site at Domains section under Settings tab.
-2. Removing all the environment variables to the MONGO_URI and the SECRET_KEY. These 2 were placed in env.py during the development and have been entered to Config Vars at Heroku for deployment.
+1. At Heroku, create new application named "inspire-quote" and go to the "Deploy" tab. At the "Deployment Method" section, select GitHub. Once the "Connect to GitHub" section is shown, fill in the repository name of the site at GitHub and click Search. Connect to the correct repository at GitHub. Upon successul on the deployment, Heroku will give the URL that hosted the site at "Domains" section under the "Settings" tab.
+2. Removing all the environment variables of the MONGO_URI and the SECRET_KEY. These 2 were placed in env.py during the development and have been entered to "Config Vars" at the Heroku for deployment.
 3. Make sure the requirements.txt is up-to-date with all the latest packages installed for the site by using `pip3 freeze > requirements.txt`
-4. Creating Procfile that required by Heroku to run the site by using `echo web: python app.py > Procfile`
+4. Creating Procfile that required by the Heroku to run the site by using `echo web: python app.py > Procfile`
 5. Set the Flask debugging to False.
 6. Push all the updated code to Github.
 7. All the updated code that have been pushed to GitHub will be updated automatically to the deployed site at Heroku.
 
 ## Credits
 ### Content
-- The site was designed and completed by myself. All text and quote were written with reference on:
+- The site was designed and completed by myself. All texts and quotes were written with reference on:
     - [BrightDrops](https://brightdrops.com/daily-inspirational-quotes)
     - [Brian Tracy](https://www.briantracy.com/blog/personal-success/26-motivational-quotes-for-success/)
 
 ### Media
-- The carousel images was sourced and designed by using [Design Wizard](https://www.designwizard.com/template/recreation/inspirational-quotes-images/).
+- The carousel inspirational quoting images were sourced and designed by using [Design Wizard](https://www.designwizard.com/template/recreation/inspirational-quotes-images/).
 - The browser icon for the site was sourced from [FLATICON](https://www.flaticon.com/).
 
 ### Acknowledgements
-- Special thanks to [Dick Vlaanderen](https://github.com/dickvla), my mentor from Code Institute, for his valuable advice and guidance.
-- Thank you to the Tutor Support at Code Institute for the valuable feedback.
+- Special thanks to [Dick Vlaanderen](https://github.com/dickvla), my mentor from Code Institute, for his valuable advice and guidance as always.
+- Thank you to the Tutor Support at Code Institute for their great feedback.
 - The idea of the site mainly from myself with the reference of [BrightDrops](https://brightdrops.com/daily-inspirational-quotes) and [Brian Tracy](https://www.briantracy.com/blog/personal-success/26-motivational-quotes-for-success/).
 - In the middle of the project, I refer to [w3schools.com](https://www.w3schools.com/), [stackoverflow](https://stackoverflow.com/) and the video lessons from [Code Institute](https://codeinstitute.net/).
